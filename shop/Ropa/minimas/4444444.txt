@@ -1,50 +1,16 @@
-Read the directions and write the name of the places in the blanks
+mkdir ( nombre del folder ) = crear un directorio ( folder )
 
-1.Excuse me,how can | go to the ?
+cd (con el nombre del folder ) = es bucar en el disco la carpeta
 
-Walk along Violet Street.Take the first turning on
-the right.Go straight on.It's on your left between
-the restaurant and the hospital.
+npm init -y = creacion del package de json y (-y es dar si todos los permisos)
 
-2.Sir,can you tell me the way to the ?
+npm install express mysql body-parser express-session = instalacion de la libre npm al igual q mysql  con la instalaccion de express con el protocolo 
 
-Of course.Walk along Lily Street.Turn left into Daisy
-Street.Go straight on.Take the second turning on
-the left.It's on your left between the amusement
-park and the greengrocer.
+npm install -g npm@(version ) = instalacion y actualizacion de la version q le pide 
 
-3.Can you help me,please? | want to go to the
-?
+code . = Entrar al directorio 
 
-Certainly.Walk along Violet Street.Take the first
-turning on the left.It's on your right opposite the
 
-park.
-4.Excuse me,is there a near here?
+(intslacion de q si no tiene un archivo en modules_node hacer el siguiente codigo ) = npm install ( nombre del modulo  q le falta ) 
 
-Yes. Walk along Lily Street.Take the first turning on
-the left.It's on your right next to the bank.
-
-5.Excuse me,how can | go to the ?
-
-Walk along Violet Street. Take the second turning on
-the left.It's on your left.
-
-6.Sir,can you tell me the way to the ?
-
-Of course.Walk along Lily Street.Turn left into Daisy
-Street.Go straight on.Take the first turning on the
-left.It's on your left between the bookshop and cafe.
-
-7.Can you help me,please? | want to go to the
-?
-
-Certainly. Walk along Violet Street.Take the first
-turning on the right.Walk along Rose Street.Turn left
-into Daisy Street.It's on your right opposite the
-
-amusement park.
-8.Excuse me,is there a near here?
-
-Yes.Walk along Violet Street.Take the first turning on
-the right.It's on your left opposite the bookshop.
+express , mysql bodyParser , express -session y ejs ) = importante en modulos de node si no no va a funcionar. 
