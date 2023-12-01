@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pagina</title>
+    <link rel="stylesheet" href="/style/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="menu container">
+            <a href="#" class="logo">OFERTAZO X</a>
+            <input type="checkbox" id="menu">
+            <label for="menu">
+                <img src="images/menu.png" class="menu-icono" alt="menu">
+            </label>
+            <nav class="navbar">
+                <ul>
+                   
+                    <li><a href="#header">inicio</a> </li>
+                    <li><a href="#productos">Productos</a> </li>
+                    <li><a href="#blog">Ofertas Especiales - Domicilio gratis</a> </li>
+
+                        
+                   
+                </ul>
+            </nav>
+            <div>
+                <ul>
+                    
+                        <a href="/ver-carrito" ><button class="agregar-carrito-btn2"> carrito</button> </a>
+                        
+        </div>
+        </div>
+        <div class="header-content container">
+    <div class="header-img">
+        <ul>
+            <% if (productos.length > 0) { %>
+                <li>
+              
+                    <img src="data:image/jpeg;base64,<%= productos[0].imagen.toString('base64') %>" alt="<%= productos[0].titulo %>">
+                   
+                </li>
+            <% } else { %>
+                <p>No hay productos disponibles</p>
+            <% } %>
+    </ul>
+    </div>
+    <div class="header-txt">
+        <h1>Ofertas Especiales</h1>
+        <p>Aprovecha y llevate este buso con el 50%</p>
+ 
+        <ul>
+            <% if (productos.length > 0) { %>
+                <li>
+              
+                    <h3><%= productos[0].titulo %><br> <br>
+                     Descripcion :   <%= productos[0].descripcion %><br> <br>
+                        Precio del producto :<%= productos[0].precio %>
+                    </h3> <br>
+                    <form action="/agregar-al-carrito/<%= productos[0].imagen_id %>" method="post">
+                
+                        <button type="submit" class="agregar-carrito-btn">Agregar al carrito</button>
+                    </form>
+                </li>
+            <% } else { %>
+                <p>No hay productos disponibles</p>
+            <% } %>
+    </ul>
+    </div>
+</div>
+
+        
+    </header>
+
+    <section class="ofertas-container" id="productos">
+        <div class="oferta-item">
+            <div class="oferta-imagen">
+                <% if (productos.length > 1) { %>
+      
+                    <img src="data:image/jpeg;base64,<%= productos[1].imagen.toString('base64') %>" alt="<%= productos[0].titulo %>">
+
+                <% } else { %>
+                    <p>No hay productos disponibles</p>
+                <% } %>
+            </div>
+            <div class="oferta-texto">
+                <% if (productos.length > 1) { %>
+     
+                    <h3><%= productos[1].titulo %><br> <br>
+                        Descripcion : <%= productos[1].descripcion %><br> <br>
+                        Precio del producto :<%= productos[1].precio %>
+                    </h3> <br> <br> 
+
+                    <form action="/agregar-al-carrito/<%= productos[1].imagen_id %>" method="post">
+                        <button type="submit" class="agregar-carrito-btn">Agregar al carrito</button>
+                    </form>
+                <% } else { %>
+                    <p>No hay productos disponibles</p>
+                <% } %>
+            </div>
+        </div>
+    
+        <div class="oferta-item">
+            <div class="oferta-imagen">
+                <% if (productos.length > 2) { %>
+              
+                    <img src="data:image/jpeg;base64,<%= productos[2].imagen.toString('base64') %>" >
+
+                <% } else { %>
+                    <p>No hay productos disponibles</p>
+                <% } %>
+            </div>
+            <div class="oferta-texto">
+                <% if (productos.length > 2) { %>
+
+                    <h3><%= productos[2].titulo %><br><br>
+                       Descripcion : <%= productos[2].descripcion %><br> <br>
+                        Precio del producto :<%= productos[2].precio %>
+                    </h3> <br>
+                    <form action="/agregar-al-carrito/<%= productos[2].imagen_id %>" method="post"> 
+                        <button type="submit" class="agregar-carrito-btn">Agregar al carrito</button>
+                    </form>
+                <% } else { %>
+                    <p>No hay productos disponibles</p>
+                <% } %>
+            </div>
+        </div>
+    
+        <div class="oferta-item">
+            <div class="oferta-imagen">
+                <% if (productos.length > 3) { %>
+                 
+                    <img src="data:image/jpeg;base64,<%= productos[3].imagen.toString('base64') %>" >
+                 
+                <% } else { %>
+                    <p>No hay productos disponibles</p>
+                <% } %>
+            </div>
+            <div class="oferta-texto">
+                <% if (productos.length > 3) { %>
+                    
+                    <h3><%= productos[3].titulo %><br> <br>
+                       Descripcion : <%= productos[3].descripcion %><br><br>
+                        Precio del producto :<%= productos[3].precio %>
+                    </h3> <br>
+                    <form action="/agregar-al-carrito/<%= productos[3].imagen_id %>" method="post">
+                        <button type="submit" class="agregar-carrito-btn">Agregar al carrito</button>  
+                    </form>
+                <% } else { %>
+                    <p>No hay productos disponibles</p>
+                <% } %>
+            </div>
+        </div>
+    </section>
+    
+    
+    <main class="products container " id="lista-1">
+
+   
+    
+            <div class="product-content">
+                
+                <div class="oferta-item">
+                    <div class="oferta-imagen">
+                        <% if (productos.length > 4) { %>
+                         
+                            <img src="data:image/jpeg;base64,<%= productos[4].imagen.toString('base64') %>" >
+                         
+                        <% } else { %>
+                            <p>No hay productos disponibles</p>
+                        <% } %>
+                    </div>
+                    <div class="oferta-texto">
+                        <% if (productos.length > 4) { %>
+                            
+                            <h3><%= productos[4].titulo %><br> <br>
+                               Descripcion : <%= productos[4].descripcion %><br><br>
+                                Precio del producto :<%= productos[4].precio %>
+                            </h3> <br>
+                            <form action="/agregar-al-carrito/<%= productos[4].imagen_id %>" method="post">
+                                <button type="submit" class="agregar-carrito-btn">Agregar al carrito</button>  
+                            </form>
+                        <% } else { %>
+                            <p>No hay productos disponibles</p>
+                        <% } %>
+                    </div>
+                </div>
+                
+                <!-- Puedes repetir el bloque de código para más productos según sea necesario -->
+                
+         
+
+         <div class="oferta-item">
+            <div class="oferta-imagen">
+                <% if (productos.length > 5) { %>
+                 
+                    <img src="data:image/jpeg;base64,<%= productos[5].imagen.toString('base64') %>" >
+                 
+                <% } else { %>
+                    <p>No hay productos disponibles</p>
+                <% } %>
+            </div>
+            <div class="oferta-texto">
+                <% if (productos.length > 5) { %>
+                    
+                    <h3><%= productos[5].titulo %><br> <br>
+                       Descripcion : <%= productos[5].descripcion %><br><br>
+                        Precio del producto :<%= productos[5].precio %>
+                    </h3> <br>
+                    <form action="/agregar-al-carrito/<%= productos[5].imagen_id %>" method="post">
+                        <button type="submit" class="agregar-carrito-btn">Agregar al carrito</button>  
+                    </form>
+                <% } else { %>
+                    <p>No hay productos disponibles</p>
+                <% } %>
+            </div>
+        </div>
+
+        <div class="oferta-item">
+            <div class="oferta-imagen">
+                <% if (productos.length > 6) { %>
+                 
+                    <img src="data:image/jpeg;base64,<%= productos[6].imagen.toString('base64') %>" >
+                 
+                <% } else { %>
+                    <p>No hay productos disponibles</p>
+                <% } %>
+            </div>
+            <div class="oferta-texto">
+                <% if (productos.length > 6) { %>
+                    
+                    <h3><%= productos[3].titulo %><br> <br>
+                       Descripcion : <%= productos[6].descripcion %><br><br>
+                        Precio del producto :<%= productos[6].precio %>
+                    </h3> <br>
+                    <form action="/agregar-al-carrito/<%= productos[6].imagen_id %>" method="post">
+                        <button type="submit" class="agregar-carrito-btn">Agregar al carrito</button>  
+                    </form>
+                <% } else { %>
+                    <p>No hay productos disponibles</p>
+                <% } %>
+            </div>
+        </div>
+
+        <div class="oferta-item">
+            <div class="oferta-imagen">
+                <% if (productos.length > 7) { %>
+                 
+                    <img src="data:image/jpeg;base64,<%= productos[7].imagen.toString('base64') %>" >
+                 
+                <% } else { %>
+                    <p>No hay productos disponibles</p>
+                <% } %>
+            </div>
+            <div class="oferta-texto">
+                <% if (productos.length > 8) { %>
+                    
+                    <h3><%= productos[8].titulo %><br> <br>
+                       Descripcion : <%= productos[8].descripcion %><br><br>
+                        Precio del producto :<%= productos[8].precio %>
+                    </h3> <br>
+                    <form action="/agregar-al-carrito/<%= productos[8].imagen_id %>" method="post">
+                        <button type="submit" class="agregar-carrito-btn">Agregar al carrito</button>  
+                    </form>
+                <% } else { %>
+                    <p>No hay productos disponibles</p>
+                <% } %>
+            </div>
+        </div>
+
+        <div class="oferta-item">
+            <div class="oferta-imagen">
+                <% if (productos.length > 9) { %>
+                 
+                    <img src="data:image/jpeg;base64,<%= productos[9].imagen.toString('base64') %>" >
+                 
+                <% } else { %>
+                    <p>No hay productos disponibles</p>
+                <% } %>
+            </div>
+            <div class="oferta-texto">
+                <% if (productos.length > 9) { %>
+                    
+                    <h3><%= productos[9].titulo %><br> <br>
+                       Descripcion : <%= productos[9].descripcion %><br><br>
+                        Precio del producto :<%= productos[9].precio %>
+                    </h3> <br>
+                    <form action="/agregar-al-carrito/<%= productos[9].imagen_id %>" method="post">
+                        <button type="submit" class="agregar-carrito-btn">Agregar al carrito</button>  
+                    </form>
+                <% } else { %>
+                    <p>No hay productos disponibles</p>
+                <% } %>
+            </div>
+        </div>
+
+        <div class="oferta-item">
+            <div class="oferta-imagen">
+                <% if (productos.length > 10) { %>
+                 
+                    <img src="data:image/jpeg;base64,<%= productos[10].imagen.toString('base64') %>" >
+                 
+                <% } else { %>
+                    <p>No hay productos disponibles</p>
+                <% } %>
+            </div>
+            <div class="oferta-texto">
+                <% if (productos.length > 10) { %>
+                    
+                    <h3><%= productos[10].titulo %><br> <br>
+                       Descripcion : <%= productos[10].descripcion %><br><br>
+                        Precio del producto :<%= productos[10].precio %>
+                    </h3> <br>
+                    <form action="/agregar-al-carrito/<%= productos[10].imagen_id %>" method="post">
+                        <button type="submit" class="agregar-carrito-btn">Agregar al carrito</button>  
+                    </form>
+                <% } else { %>
+                    <p>No hay productos disponibles</p>
+                <% } %>
+            </div>
+        </div>
+    </div>
+
+    </main>
+
+   
+    <section class="blog container" id="blog">
+     
+
+        <div class="blog-1" >
+            <img src="../images/b2.jpg" alt="">
+            <h3>Ofertas Especiales</h3>
+            <p>Cada semana, durante todo el mes, lanzaremos descuentos irresistibles en una amplia selección de prendas de moda. Desde elegantes conjuntos para ocasiones especiales hasta cómodas prendas para tu día a día, tendrás la oportunidad de disfrutar de descuentos que harán que renovar tu guardarropa sea una experiencia emocionante y asequible.
+                <br> <br>
+                Tenemos domicilios gratis desde $100.000 pesos para q vengan y aprovechen 
+
+                
+            </p>
+        </div>
+
+        
+        <div class="blog-1" >
+            <img src="../images/b1.jpg" alt="">
+            <h3>¿Quienes Somos?</h3>
+            <p>En el vibrante corazón de Colombia, en la ciudad de Medellín, un grupo visionario de emprendedores decidieron unir fuerzas para dar vida a una marca de ropa que reflejara la rica diversidad cultural y la creatividad innata de su amado país. Estos fundadores, apasionados por la moda y comprometidos con el impulso de la economía local, se propusieron no solo diseñar prendas de alta calidad, sino también construir un legado que honrara la artesanía colombiana.
+
+                
+            </p>
+        </div>
+
+        <div class="blog-1" >
+            <img src="../images/b3.jpg" alt="">
+            <h3> Logros y Reconocimiento</h3>
+            <p>Galardón a la Innovación Textil en Cúcuta:
+
+Nuestra marca ha sido honrada con el "Galardón a la Innovación Textil en Cúcuta" por destacarnos en la escena local con diseños que fusionan la rica herencia cultural de la región con elementos de vanguardia. <br> <br>
+Reconocimiento por Sostenibilidad Ambiental en Norte de Santander:
+
+
+
+                
+            </p>
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content container"></div>
+
+    </footer>
+
+    
+    <script src="../index.js"></script>
+    <script src="../script.js"></script>
+
+
+    
+</body>
+</html>

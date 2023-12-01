@@ -18,7 +18,7 @@ const db = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password: '',
-  database: 'proyectoFinal',
+  database: 'proyectofinal',
 });
 
 db.connect((err) => {
@@ -40,6 +40,7 @@ app.post('/agregar-al-carrito/:id', (req, res) => {
   req.session.cart = sessionCart;
   res.redirect('/');
 });
+
 app.get('/ver-carrito', (req, res) => {
     const sessionCart = req.session.cart || [];
   
@@ -54,7 +55,6 @@ app.get('/ver-carrito', (req, res) => {
       });
     }
   });
-
 
 app.listen(port, () => {
   console.log(`Servidor http://localhost:${port}`);

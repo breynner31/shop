@@ -22,8 +22,12 @@ img {
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
+    flex: 1;
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    box-sizing: border-box;
 }
 
 .header {
@@ -35,13 +39,16 @@ img {
 }
 
 .menu {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: #f5f5f5; /* Puedes ajustar el color de fondo según tus preferencias */
+    padding: 10px; /* Añadí un relleno para mejorar la apariencia */
+    z-index: 1000;
 }
 
 .logo {
@@ -51,15 +58,9 @@ img {
     font-weight: 800;
 }
 
-
-
 .menu .navbar {
-    background-color:#f5f5f5;
-    position: fixed;
-    left: 500px;
-
-    top: 10px;
-    z-index: 1000;
+    position: relative; /* Quité la propiedad 'fixed' y 'left' */
+    top: 0; /* Quité 'top' para que la posición se ajuste automáticamente según el contenido */
 }
 
 .menu .navbar ul {
@@ -69,16 +70,26 @@ img {
 }
 
 .menu .navbar ul li {
-    float: left;
+    display: inline; /* En lugar de float: left */
+    margin-right: 10px; /* Añadí un margen derecho para separar los elementos del menú */
 }
 
 .menu .navbar ul li a {
     font-size: 18px;
-    padding: 20px;
+    padding: 10px;
     color: #111111;
-    display: block;
+    text-decoration: none;
+    position: relative; /* Añadí esta propiedad para posicionar el elemento de manera relativa */
+
+    /* Añadí las siguientes propiedades para la línea decorativa */
+    transition: border-bottom 0.3s;
+    border-bottom: 2px solid transparent;
 }
 
+.menu .navbar ul li a:hover,
+.menu .navbar ul li a:active {
+    border-bottom: 2px solid #45a049; /* Cambia el color de la línea al pasar el ratón o al hacer clic */
+}
 #menu {
     display: none;
 }
@@ -217,8 +228,9 @@ th, td {
 }
 
 .products {
-    padding: 50px 0;
-    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
 }
 
 .products h2 {
@@ -236,16 +248,29 @@ th, td {
 }
 
 .product {
+    flex: 1;
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
     text-align: center;
-    padding: 30px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+
 }
 
 .product img {
-    width: 250px;
-    height: 370px;
-    margin-bottom: 20px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+
+.product-img img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
 
 .product h3 {
     font-size: 20px;
@@ -328,7 +353,75 @@ th, td {
     justify-content: space-between;
 }
 
+/* 
+codigo nuevo de targeta  */
 
+.ofertas-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch; /* Hace que todos los elementos tengan la misma altura */
+}
+
+.oferta-item {
+    flex: 1; /* Distribuye el espacio disponible de manera equitativa entre los elementos */
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    box-sizing: border-box; /* Incluye el padding y el borde en el tamaño total */
+}
+
+.oferta-img {
+    height: 200px; /* Establece la altura deseada para todos los contenedores */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.oferta-img img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover; /* Controla cómo se ajusta la imagen dentro del contenedor */
+}
+.agregar-carrito-btn {
+    background-color: #000000; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 10px 15px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Esquinas redondeadas */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s; /* Efecto de transición en el color de fondo */
+}
+
+.agregar-carrito-btn2 {
+    position: fixed; /* Cambiado a posición fija */
+    top: 20px; /* Ajuste la posición desde la parte superior según sus necesidades */
+    right: 100px; /* Ajuste la posición desde la derecha según sus necesidades */
+    background-color: #000000;
+    color: white;
+    padding: 10px 20px; /* Ajusté el espaciado interno para que se vea mejor */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.agregar-carrito-btn2:hover {
+    background-color: #45a049;
+}
+
+
+
+.agregar-carrito-btn:hover {
+    background-color: #45a049; /* Color de fondo al pasar el ratón */
+}
+
+
+.oferta-texto img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+}
 
 @media(max-width:991px) {
 
