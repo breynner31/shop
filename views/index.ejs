@@ -75,6 +75,13 @@
         
     </header>
 
+    
+    <div class="destacado">
+        <b>
+        <h1>LO MAS DESTACADO </h1></b>
+    </div>
+
+
     <section class="ofertas-container" id="productos">
         <div class="oferta-item">
             <div class="oferta-imagen">
@@ -156,10 +163,14 @@
         </div>
     </section>
     
-    
+    <div class="destacado">
+        <b>
+        <h1> CATALOGO </h1></b>
+    </div>
     <main class="products container " id="lista-1">
 
-   
+            
+
     
             <div class="product-content">
                 
@@ -209,7 +220,7 @@
                     <h3><%= productos[5].titulo %><br> <br>
                        Descripcion : <%= productos[5].descripcion %><br><br>
                         Precio del producto :<%= productos[5].precio %>
-                    </h3> <br>
+                    </h3> <br> <br>
                     <form action="/agregar-al-carrito/<%= productos[5].imagen_id %>" method="post">
                         <button type="submit" class="agregar-carrito-btn">Agregar al carrito</button>  
                     </form>
@@ -235,7 +246,7 @@
                     <h3><%= productos[3].titulo %><br> <br>
                        Descripcion : <%= productos[6].descripcion %><br><br>
                         Precio del producto :<%= productos[6].precio %>
-                    </h3> <br>
+                    </h3> <br> 
                     <form action="/agregar-al-carrito/<%= productos[6].imagen_id %>" method="post">
                         <button type="submit" class="agregar-carrito-btn">Agregar al carrito</button>  
                     </form>

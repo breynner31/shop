@@ -393,6 +393,11 @@ codigo nuevo de targeta  */
     transition: background-color 0.3s; /* Efecto de transición en el color de fondo */
 }
 
+.destacado {
+    margin: 30px;
+    text-align: center;
+}
+
 .agregar-carrito-btn2 {
     position: fixed; /* Cambiado a posición fija */
     top: 20px; /* Ajuste la posición desde la parte superior según sus necesidades */
